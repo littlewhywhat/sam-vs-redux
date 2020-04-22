@@ -4,6 +4,7 @@ export const TodosActions = createActions(
     {
         todosLoaded: ["todos"],
         addTodo: ["todo"],
+        getTodos: [],
     },
     { prefix: "todos/" }
 );
