@@ -20,7 +20,8 @@
 
 #addtodo input {
     flex: 1;
-    font-family: monospace;
+    font-family: "sans-serif";
+    margin-bottom: 0;
 }
 
 #root li {
@@ -28,5 +29,5 @@
 }
 
 #root input {
-    background-color: lightgoldenrodyellow;
+    background-color: beige;
 }
