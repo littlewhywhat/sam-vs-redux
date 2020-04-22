@@ -1,5 +1,8 @@
 import React from "react";
 import "./ToDoList.css";
+import { getTodos } from "../todos/todos-selectors";
+import { connect } from "react-redux";
+import { TodosActions } from "../todos/todos-actions";
 
 const ToDoListComponent = ({ todos, addTodo }) => (
     <div>
@@ -22,4 +25,15 @@ const ToDoListComponent = ({ todos, addTodo }) => (
     </div>
 );
 
-export const ToDoList = ToDoListComponent;
+const mapStateToProps = (state) => ({
+    todos: getTodos(state),
+});
+
+const mapDispatchToProps = {
+    addTodo: TodosActions.Creators.addTodo,
+};
+
+export const ToDoList = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ToDoListComponent);
