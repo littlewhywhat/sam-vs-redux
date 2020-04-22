@@ -2,7 +2,7 @@ import React from "react";
 import "./ToDoList.css";
 import { getTodos } from "../todos/todos-selectors";
 import { connect } from "react-redux";
-import { TodosActions } from "../todos/todos-actions";
+import { addTodoThunk } from "../todos/todos-thunks";
 
 const ToDoListComponent = ({ todos, addTodo }) => (
     <div>
@@ -30,7 +30,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-    addTodo: TodosActions.Creators.addTodo,
+    addTodo: addTodoThunk,
 };
 
 export const ToDoList = connect(
