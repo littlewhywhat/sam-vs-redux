@@ -2,7 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const PORT = 3001;
-const todos = [];
+const todos = [
+    { id: 1, name: "buy milk" },
+    { id: 2, name: "buy bread" },
+];
 
 const app = express();
 app.use(bodyParser.json());

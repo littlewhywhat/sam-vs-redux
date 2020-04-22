@@ -1,0 +1,32 @@
+#addtodo {
+    display: flex;
+}
+
+#root ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#root li,
+#root input,
+#root button {
+    border: 4px solid;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    font-size: 50px;
+}
+
+#addtodo input {
+    flex: 1;
+    font-family: monospace;
+}
+
+#root li {
+    background-color: bisque;
+}
+
+#root input {
+    background-color: lightgoldenrodyellow;
+}
